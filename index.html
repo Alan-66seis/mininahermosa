@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me perdonas?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f0;
+            color: #000000; /* Color del texto principal */
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            position: relative; /* Añadido para posición relativa */
+        }
+        #siButton {
+            background-color: #ff66b3; /* Color de fondo del botón "Sí" */
+            color: white; /* Color del texto del botón "Sí" */
+        }
+        #noButton {
+            background-color: #ff99cc; /* Color de fondo del botón "No" */
+            color: #000000; /* Color del texto del botón "No" */
+        }
+        #message {
+            color: green; /* Color del mensaje de agradecimiento */
+            font-size: 20px;
+            margin-top: 20px;
+            text-transform: uppercase; /* Texto en mayúsculas */
+            display: none;
+            animation: fadeIn 1s ease forwards; /* Animación de aparición */
+        }
+        #peteMessage {
+            color: #000000; /* Color del mensaje "muchas gaashiash mi amor te amo mucho mucho perdon por todo te amo casate conmigo" */
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+    <script>
+        function showThankYouMessage() {
+            document.getElementById('message').style.display = 'block'; // Muestra el mensaje de agradecimiento
+            document.getElementById('peteMessage').style.display = 'block'; // Muestra el mensaje "muchas gaashiash mi amor te amo mucho mucho perdon por todo te amo casate conmigo"
+            document.getElementById('siOption').style.display = 'block'; // Muestra la opción "Sí"
+            document.getElementById('siButton').style.display = 'none'; // Oculta el botón "Sí"
+            document.getElementById('favorButton').style.display = 'none'; // Oculta el botón "Sí" de la pregunta "Me haces un favor"
+            document.getElementById('title').style.display = 'none'; // Oculta el título "Keeyla me Perdonas? :c"
+            document.getElementById('buttons').style.display = 'none'; // Oculta el contenedor de botones
+        }
+
+        function moveNoButton() {
+            const noButton = document.getElementById('noButton');
+            const newPositionX = Math.random() * 50 - 25; // Mueve entre -25 y 25 píxeles horizontalmente
+            const newPositionY = Math.random() * 50 - 25; // Mueve entre -25 y 25 píxeles verticalmente
+            noButton.style.transform = `translate(${newPositionX}px, ${newPositionY}px)`;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">Keeyla mi niña, Me Perdonas?</h1>
+    <div id="buttons">
+        <button id="siButton" onclick="showThankYouMessage()">Sí</button>
+        <button id="noButton" onclick="moveNoButton()">No</button>
+    </div>
+    
+    <div id="message">
+        <p>¡MUCHAS GRACIAS MI PRINCESA LINDA&lt;33!</p>
+    </div>
+    <div id="peteMessage">
+        <p>muchas gaashiash mi amor te amo mucho mucho perdon por todo te amo casate conmigo</p>
+    </div>
+    <div id="favorButton">
+        <!-- Eliminado el botón "Sí" de la pregunta "Me haces un favor" -->
+    </div>
+    <div id="siOption">
+        <!-- Eliminado el botón "Sí" de abajo -->
+    </div>
+</body>
+</html>
