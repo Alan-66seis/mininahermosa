@@ -1,0 +1,69 @@
+page:
+  title: "¿Me perdonas?"
+  language: "es"
+
+style:
+  body:
+    font-family: "Arial, sans-serif"
+    text-align: "center"
+    background-color: "#ffe6f0"
+    color: "#000000"
+    margin-top: "50px"
+
+  button:
+    padding: "10px 20px"
+    font-size: "16px"
+    margin: "10px"
+    border: "none"
+    cursor: "pointer"
+    position: "relative"
+
+  buttons:
+    si:
+      background-color: "#ff66b3"
+      color: "white"
+    no:
+      background-color: "#ff99cc"
+      color: "#000000"
+
+  message:
+    color: "green"
+    font-size: "20px"
+    margin-top: "20px"
+    text-transform: "uppercase"
+    display: "none"
+    animation: "fadeIn 1s ease forwards"
+
+  peteMessage:
+    color: "#000000"
+    margin-top: "10px"
+    display: "none"
+
+content:
+  title: "Keeyla mi niña, Me Perdonas?"
+
+  buttons:
+    - id: "siButton"
+      text: "Sí"
+      action: "showThankYouMessage"
+
+    - id: "noButton"
+      text: "No"
+      action: "moveNoButton"
+
+  messages:
+    thank_you: "¡MUCHAS GRACIAS MI PRINCESA LINDA<33!"
+    pete: "muchas gaashiash mi amor te amo mucho mucho perdon por todo te amo casate conmigo"
+
+scripts:
+  showThankYouMessage:
+    - show: "message"
+    - show: "peteMessage"
+    - show: "siOption"
+    - hide: "siButton"
+    - hide: "favorButton"
+    - hide: "title"
+    - hide: "buttons"
+
+  moveNoButton:
+    description: "Mover el botón No a una posición aleatoria"
